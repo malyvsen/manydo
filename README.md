@@ -11,5 +11,5 @@ from manydo import map
 
 map(lambda x: x + 3, [1, 2, 3]) # [4, 5, 6]
 map(function, iterable, num_jobs=16) # try not to burn your CPU
-map(function, iterable, loading_bar=False) # if you insist
+map(function, tqdm(iterable)) # will properly handle tqdm
 ```
