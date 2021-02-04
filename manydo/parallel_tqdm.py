@@ -1,17 +1,12 @@
 import contextlib
 import joblib
-from tqdm import tqdm
-from tqdm.notebook import tqdm as tqdm_notebook
-
-
-def parallel_tqdm_maybe(iterable):
-    '''Check if an iterable is wrapped in tqdm - if yes, make sure it works with joblib.'''
-    use_tqdm = isinstance(iterable, tqdm) or isinstance(iterable, tqdm_notebook)
-    return tqdm_joblib(iterable) if use_tqdm else contextlib.nullcontext()
+from tqdm.auto import tqdm
 
 
 @contextlib.contextmanager
-def tqdm_joblib(tqdm_object):    
+def parallel_tqdm(iterable, tqdm_kwargs):
+    tqdm_object = tqdm(iterable, **tqdm_kwargs)
+
     class TqdmBatchCompletionCallback(joblib.parallel.BatchCompletionCallBack):
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
