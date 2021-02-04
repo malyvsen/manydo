@@ -1,15 +1,12 @@
 [tool.poetry]
 name = "manydo"
-version = "0.1.2"
+version = "0.1.3"
 description = "Dead-simple parallel execution."
 authors = ["malyvsen"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/malyvsen/manydo"
-keywords = [
-    "parallelism",
-    "multithreading"
-]
+keywords = ["parallelism", "multithreading"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
