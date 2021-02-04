@@ -18,3 +18,7 @@ map(function, iterable, num_jobs=16) # try not to burn your CPU
 map(function, iterable, loading_bar=False)
 map(function, iterable, desc='Passes arguments to tqdm')
 ```
+
+## Related projects
+
+[pqdm](https://github.com/niedakh/pqdm) is very similar, but didn't work for me ¯\\\_(ツ)\_/¯
