@@ -1,6 +1,7 @@
 import pytest
-from tqdm import tqdm
+import re
 import time
+from tqdm import tqdm
 from manydo import map
 
 
@@ -30,7 +31,7 @@ def test_slow_loading(capfd):
     assert "100%" in captured.err
     assert "█" in captured.err
     assert "3/3" in captured.err
-    assert "1.00s/it" in captured.err
+    assert re.search(r"1.0\ds/it", captured.err)
 
 
 def test_loading_bar_arguments(capfd):
