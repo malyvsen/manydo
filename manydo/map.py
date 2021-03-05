@@ -1,6 +1,6 @@
-import contextlib
 import joblib
 from .parallel_tqdm import parallel_tqdm
+from .no_context import no_context
 
 
 def map(function, iterable, num_jobs=8, loading_bar=True, **kwargs):
@@ -14,7 +14,7 @@ def map(function, iterable, num_jobs=8, loading_bar=True, **kwargs):
     context = (
         parallel_tqdm(iterable, tqdm_kwargs=kwargs)
         if loading_bar
-        else contextlib.nullcontext()
+        else no_context()
     )
     with context:
         pool = joblib.Parallel(n_jobs=num_jobs)

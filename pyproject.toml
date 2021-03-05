@@ -9,7 +9,7 @@ repository = "https://github.com/malyvsen/manydo"
 keywords = ["parallelism", "multithreading"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6"
 joblib = "^1.0.0"
 tqdm = "^4.56.0"
 
