@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "manydo"
-version = "0.1.4"
+version = "0.1.5"
 description = "Dead-simple parallel execution."
 authors = ["malyvsen"]
 license = "MIT"
@@ -11,7 +11,7 @@ keywords = ["parallelism", "multithreading"]
 [tool.poetry.dependencies]
 python = "^3.6"
 joblib = "^1.0.0"
-tqdm = "^4.56.0"
+tqdm = "^4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.1"
