@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "manydo"
-version = "0.1.5"
+version = "0.1.6"
 description = "Dead-simple parallel execution."
 authors = ["malyvsen"]
 license = "MIT"
