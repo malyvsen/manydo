@@ -58,3 +58,8 @@ def test_zero_jobs():
 def test_negative_jobs():
     with pytest.raises(ValueError):
         map(lambda x: x + 3, [1, 2, 3], num_jobs=-3)
+
+
+def test_invalid_function():
+    with pytest.raises(ValueError):
+        map(lambda x, y: x + y, [1, 2, 3], num_jobs=3)
